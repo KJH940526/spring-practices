@@ -12,14 +12,13 @@
 		아래 항목을 기입하고 submit 버튼을 클릭하세요.
 	</p>
 	<form action="${pageContext.request.contextPath }/add" method="post">
-		<input type="hidden" name='a' value="add"/>
-	    First name: <input type="text" name="firstName" value="" >
+	    First name: <input type="text" name="firstName" value=""/>
 	    <br/><br/>
 	    
-	    Last name: <input type="text" name="lastName" value="">
+	    Last name: <input type="text" name="lastName" value=""/>
 	    <br/><br/>
 	    
-	    Email address: <input type="text" name="email" value="">
+	    Email address: <input type="text" name="email" value=""/>
 	    <br/><br/>
 	    
 	    <input type="submit" value="등록">
