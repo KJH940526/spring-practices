@@ -11,8 +11,8 @@ public class ExampleController {
 	
 	/**
 	 *  Logger 생성
-	 */
-	private static final Log LOG = LogFactory.getLog( ExampleController.class );
+	 */											//  클래스이름
+	private static final Log LOG = LogFactory.getLog(ExampleController.class );
 	
 	@RequestMapping( "/ex1" )
 	@ResponseBody
@@ -32,10 +32,10 @@ public class ExampleController {
 		 *     직접 테스트 해 보세요.
 		 *  
 		 */
-		LOG.debug( "#ex1 - debug log" );
-		LOG.info( "#ex1 - info log" );
-		LOG.warn( "#ex1 - warn log" );
-		LOG.error( "#ex1 - error log" );
+		LOG.debug("#ex1 - debug log" );
+		LOG.info("#ex1 - info log" );
+		LOG.warn("#ex1 - warn log" );
+		LOG.error("#ex1 - error log" );
 		
 		return "Logback Logging Example1";
 	}
