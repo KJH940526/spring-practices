@@ -45,5 +45,9 @@ public class User {
 	public String toString() {
 		return "User [no=" + no + ", name=" + name + ", friend=" + friend + ", friends=" + friends + "]";
 	}
+
+	public Object getName() {
+		return name;
+	}
 	
 }
