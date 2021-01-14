@@ -34,6 +34,13 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<!-- 자바 표준 버젼(JR330) scanning, wiring Annotion-->
+		<dependency>
+		    <groupId>javax.inject</groupId>
+		    <artifactId>javax.inject</artifactId>
+		    <version>1</version>
+		</dependency>
+		
 		<!--  -->
 		<!-- https://mvnrepository.com/artifact/com.github.stefanbirkner/system-rules -->
 		<dependency>
