@@ -3,6 +3,7 @@ package container.config.videosystem;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import container.videosystem.Avengers;
 import container.videosystem.DVDPlayer;
 import container.videosystem.DigitalVideoDisc;
 
@@ -14,12 +15,29 @@ public class DVDPlayerConfig {
 		return new Avengers();
 	}
 	
-	// 주입하기1 : setter 주입 : 파라미터로 Bean 전달하기!
-	@Bean
-	public DVDPlayer dvdPlayer(DigitalVideoDisc dvd) {
+	// 주입하기01 : setter 주입 : 파라미터로 Bean 전달하기!
+//	@Bean
+	public DVDPlayer dvdPlayer01(DigitalVideoDisc dvd) {
 		DVDPlayer dvdPlayer =  new DVDPlayer();
 		dvdPlayer.setDvd(dvd);
 		return dvdPlayer;
 	}
 
+	// 주입하기02 : 생성자 주입: 파라미터로 Bean 전달하기!
+//	@Bean
+	public DVDPlayer dvdPlayer02(DigitalVideoDisc dvd) {
+		return new DVDPlayer(dvd);
+	}
+	
+	// 주입하기03 : 생성자 주입: Bean 생성 메소드를 직접 호출
+	@Bean
+	public DVDPlayer dvdPlayer03() {
+		return new DVDPlayer(avengers());
+	}
+	
+	// 주입하기04 : 같은 타입을 생성할 경우
+	@Bean("palyer04")  //메소드 이름이 기본 아이드지만 아이디 변경!!
+	public DVDPlayer dvdPlayer04(DigitalVideoDisc dvd) {
+		return new DVDPlayer(dvd);
+	}
 }
