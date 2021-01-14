@@ -29,6 +29,7 @@ public class CDPlyaerXMLConfigTest {
 	@Test
 	public void testPlay() {
 		cdPlayer.play();
+																//프린트 ln에는 개행이 있어서 리플레이스로 바꿔줌!
 		assertEquals("playing 붕붕 by 김하온", systemOutRule.getLog().replace("\r\n", "").replace("\n", ""));
 	}
 
