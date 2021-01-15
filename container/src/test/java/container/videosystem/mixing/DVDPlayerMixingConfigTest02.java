@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import container.config.videosystem.mixing.DVDPlayerConfig;
+import container.config.videosystem.mixing.VideoSystemConfig;
 import container.videosystem.DVDPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {DVDPlayerConfig.class})
-public class DVDPlayerMixingConfigTest {
+@ContextConfiguration(classes = {VideoSystemConfig.class})
+public class DVDPlayerMixingConfigTest02 {
 	
 	@Autowired
 	private DVDPlayer player;
