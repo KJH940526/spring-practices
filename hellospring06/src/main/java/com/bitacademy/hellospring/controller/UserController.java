@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.bitacademy.hellospring.vo.UserVo;
+
 /*
  *  @author bit
  *  
@@ -24,13 +26,14 @@ public class UserController {
 									//들어오는 방식이 다르기 떄문에 조인으로 해도 됨!
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public String join() {
-		return "/WEB-INF/views/join.jsp";
+		return "/join";
 	}
 	
 	//오버로딩!
 	@RequestMapping(value="/join", method=RequestMethod.POST)
-	public String join(String name, String email, String password) {
-		System.out.println("UserController:join2" + name + ":" + email);
+//	public String join(String name, String email, String password) {
+	public String join(UserVo vo) {
+		System.out.println("UserController:join" + vo);
 		//포워딩이 아니고 작업이 끝났기떄문에 리다이렉트!!
 		return "redirect:/";  //아무것도 안 적었기 때문에 메인으로 간다!!
 	}
